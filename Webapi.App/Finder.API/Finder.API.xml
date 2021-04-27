@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Finder.API</name>
+    </assembly>
+    <members>
+        <member name="T:Finder.API.Controllers.EmployerController">
+            <summary>
+            Employer controller
+            </summary>
+        </member>
+        <member name="M:Finder.API.Controllers.EmployerController.#ctor(DataAccess.Abstract.IUnitOfWork{Entities.Employer})">
+            <summary>
+            Employer controller constructor 
+            </summary>
+            <param name="_employerServices"></param>
+        </member>
+        <member name="M:Finder.API.Controllers.EmployerController.Get">
+            <summary>
+            Get all employer list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Finder.API.Controllers.EmployerController.Get(System.Int32)">
+            <summary>
+            Get employer by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Finder.API.Controllers.EmployerController.Post(Entities.Employer)">
+            <summary>
+            Create employer
+            </summary>
+            <param name="employer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Finder.API.Controllers.EmployerController.Update(Entities.Employer)">
+            <summary>
+            Update employer
+            </summary>
+            <param name="employer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Finder.API.Controllers.EmployerController.DeleteEmployer(System.Int32)">
+            <summary>
+            Delete employer by id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:Finder.API.Controllers.UserController">
+            <summary>
+            User controller
+            </summary>
+        </member>
+        <member name="M:Finder.API.Controllers.UserController.#ctor(DataAccess.Abstract.IUnitOfWork{Entities.User})">
+            <summary>
+            constructor
+            </summary>
+            <param name="_userServices"></param>
+        </member>
+        <member name="M:Finder.API.Controllers.UserController.Get">
+            <summary>
+            Get all users list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Finder.API.Controllers.UserController.Get(System.Int32)">
+            <summary>
+            Get user by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Finder.API.Controllers.UserController.Post(Entities.User)">
+            <summary>
+            Create new user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Finder.API.Controllers.UserController.Update(Entities.User)">
+            <summary>
+            Update user
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Finder.API.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Delete user by id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:Finder.API.Models.Validators.EmployerValidator">
+            <summary>
+            Validation Employer
+            </summary>
+        </member>
+        <member name="M:Finder.API.Models.Validators.EmployerValidator.#ctor">
+            <summary>
+            constructor 
+            </summary>
+        </member>
+        <member name="T:Finder.API.Models.Validators.UserValidator">
+            <summary>
+            User validation
+            </summary>
+        </member>
+        <member name="M:Finder.API.Models.Validators.UserValidator.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="T:Finder.API.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Finder.API.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Finder.API.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Finder.API.Startup">
+            <summary>
+            starup
+            </summary>
+        </member>
+        <member name="M:Finder.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            constructor 
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Finder.API.Startup.Configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="M:Finder.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+             This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Finder.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
