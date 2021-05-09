@@ -49,7 +49,6 @@ namespace DataAccess.Concrate
                 throw new Exception("Operation was not performed");
             }
         }
-
         public  IEnumerable<User> GetAll()
         {
             var users = (IEnumerable<User>)Connection.Query<User>("select * from Users", transaction: Transaction);
@@ -84,7 +83,7 @@ namespace DataAccess.Concrate
 
             var aff= Connection.Execute(
                 "Update Users set name=@name,surname=@surname,age=@age where id=@id;",
-                param: new { Id = entity.Id, Name = entity.Name, Surname = entity.Surname, Age = entity.Age },
+                param: new { id = entity.Id, name = entity.Name, surname = entity.Surname, age = entity.Age },
                 transaction: Transaction
             );
             if (aff == 0)

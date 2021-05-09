@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,8 +43,8 @@ namespace Finder.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers().AddFluentValidation(x=>x.RegisterValidatorsFromAssemblyContaining<Startup>());
-            services.AddScoped(typeof(IServices<>), typeof(Manager<>));
             services.AddSingleton(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+            services.AddScoped(typeof(IServices<>), typeof(Manager<>));
             services.AddSwaggerGen();
         }
         /// <summary>
@@ -62,10 +63,9 @@ namespace Finder.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSerilogRequestLogging();
 
             app.UseRouting();
-
-            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

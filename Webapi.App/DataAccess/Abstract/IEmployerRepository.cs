@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IEmployerRepository 
+    public interface IEmployerRepository : IRepository<Employer>
     {
         IEnumerable<Employer> GetAll();
         Employer GetById(int? id);

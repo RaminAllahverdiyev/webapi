@@ -9,7 +9,7 @@
             Employer controller
             </summary>
         </member>
-        <member name="M:Finder.API.Controllers.EmployerController.#ctor(DataAccess.Abstract.IUnitOfWork{Entities.Employer})">
+        <member name="M:Finder.API.Controllers.EmployerController.#ctor(Business.Abstract.IServices{Entities.Employer},Microsoft.Extensions.Logging.ILogger)">
             <summary>
             Employer controller constructor 
             </summary>
@@ -53,11 +53,12 @@
             User controller
             </summary>
         </member>
-        <member name="M:Finder.API.Controllers.UserController.#ctor(DataAccess.Abstract.IUnitOfWork{Entities.User})">
+        <member name="M:Finder.API.Controllers.UserController.#ctor(Business.Abstract.IServices{Entities.User},Microsoft.Extensions.Logging.ILogger{Finder.API.Controllers.UserController})">
             <summary>
-            constructor
+            constructur
             </summary>
             <param name="_userServices"></param>
+            <param name="_logger"></param>
         </member>
         <member name="M:Finder.API.Controllers.UserController.Get">
             <summary>

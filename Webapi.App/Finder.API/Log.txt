@@ -1,0 +1,103 @@
+2021-05-06 17:37:04.413 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-06 17:37:04.438 +04:00 [INF] Hosting environment: Development
+2021-05-06 17:37:04.440 +04:00 [INF] Content root path: C:\Users\ramin\Documents\GitHub\webapi\Webapi.App\Finder.API
+2021-05-06 17:37:04.456 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/  
+2021-05-06 17:37:04.619 +04:00 [INF] Request finished in 171.0206ms 404 
+2021-05-06 17:37:21.248 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/api/User  
+2021-05-06 17:37:21.300 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 17:37:21.377 +04:00 [INF] Route matched with {action = "Get", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 17:37:48.438 +04:00 [INF] ugurludur
+2021-05-06 17:38:50.163 +04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-06 17:38:50.215 +04:00 [INF] Executed action Finder.API.Controllers.UserController.Get (Finder.API) in 88825.4253ms
+2021-05-06 17:38:50.216 +04:00 [INF] Executed endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 17:38:50.217 +04:00 [INF] Request finished in 88970.062ms 200 application/json; charset=utf-8
+2021-05-06 19:22:59.227 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-06 19:22:59.241 +04:00 [INF] Hosting environment: Development
+2021-05-06 19:22:59.242 +04:00 [INF] Content root path: C:\Users\ramin\Documents\GitHub\webapi\Webapi.App\Finder.API
+2021-05-06 19:22:59.250 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/  
+2021-05-06 19:22:59.381 +04:00 [INF] Request finished in 132.1795ms 404 
+2021-05-06 19:23:35.345 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/api/User  
+2021-05-06 19:23:35.361 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 19:23:35.386 +04:00 [INF] Route matched with {action = "Get", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 19:23:35.681 +04:00 [INF] ugurludur
+2021-05-06 19:23:36.113 +04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-06 19:23:36.134 +04:00 [INF] Executed action Finder.API.Controllers.UserController.Get (Finder.API) in 743.2838ms
+2021-05-06 19:23:36.135 +04:00 [INF] Executed endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 19:23:36.135 +04:00 [INF] Request finished in 790.9946ms 200 application/json; charset=utf-8
+2021-05-06 22:33:41.184 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-06 22:33:41.195 +04:00 [INF] Hosting environment: Development
+2021-05-06 22:33:41.196 +04:00 [INF] Content root path: C:\Users\ramin\Documents\GitHub\webapi\Webapi.App\Finder.API
+2021-05-06 22:33:41.207 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/  
+2021-05-06 22:33:41.306 +04:00 [INF] HTTP GET / responded 404 in 64.8899 ms
+2021-05-06 22:33:41.328 +04:00 [INF] Request finished in 130.6909ms 404 
+2021-05-06 22:35:11.409 +04:00 [INF] Request starting HTTP/2.0 PUT https://localhost:44300/api/User application/json 75
+2021-05-06 22:35:11.426 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.Update (Finder.API)'
+2021-05-06 22:35:11.461 +04:00 [INF] Route matched with {action = "Update", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Update(Entities.User) on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 22:35:12.195 +04:00 [INF] Update user {"Surname":"Allahverdiyev","Age":62,"Id":3,"Name":"Aydin","$type":"User"}
+2021-05-06 22:35:12.198 +04:00 [INF] Executing ObjectResult, writing value of type 'Entities.User'.
+2021-05-06 22:35:12.213 +04:00 [INF] Executed action Finder.API.Controllers.UserController.Update (Finder.API) in 747.2544ms
+2021-05-06 22:35:12.213 +04:00 [INF] Executed endpoint 'Finder.API.Controllers.UserController.Update (Finder.API)'
+2021-05-06 22:35:12.213 +04:00 [INF] HTTP PUT /api/User responded 200 in 803.7238 ms
+2021-05-06 22:35:12.213 +04:00 [INF] Request finished in 806.9523ms 200 application/json; charset=utf-8
+2021-05-06 22:51:39.646 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-06 22:51:39.676 +04:00 [INF] Hosting environment: Development
+2021-05-06 22:51:39.679 +04:00 [INF] Content root path: C:\Users\ramin\Documents\GitHub\webapi\Webapi.App\Finder.API
+2021-05-06 22:51:39.702 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/  
+2021-05-06 22:51:39.832 +04:00 [INF] HTTP GET / responded 404 in 58.9091 ms
+2021-05-06 22:51:39.860 +04:00 [INF] Request finished in 175.9106ms 404 
+2021-05-06 22:52:01.930 +04:00 [INF] Request starting HTTP/2.0 DELETE https://localhost:44300/api/User/1010  
+2021-05-06 22:52:01.986 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.DeleteUser (Finder.API)'
+2021-05-06 22:52:02.175 +04:00 [INF] Route matched with {action = "DeleteUser", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteUser(Int32) on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 22:52:04.298 +04:00 [ERR] Exception of type 'System.Exception' was thrown.
+2021-05-06 22:52:04.306 +04:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2021-05-06 22:52:04.341 +04:00 [INF] Executed action Finder.API.Controllers.UserController.DeleteUser (Finder.API) in 2150.966ms
+2021-05-06 22:52:04.342 +04:00 [INF] Executed endpoint 'Finder.API.Controllers.UserController.DeleteUser (Finder.API)'
+2021-05-06 22:52:04.342 +04:00 [INF] HTTP DELETE /api/User/1010 responded 400 in 2400.8720 ms
+2021-05-06 22:52:04.343 +04:00 [INF] Request finished in 2415.1434ms 400 application/problem+json; charset=utf-8
+2021-05-06 23:04:37.979 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/api/User  
+2021-05-06 23:04:37.986 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:04:38.000 +04:00 [INF] Route matched with {action = "Get", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 23:04:38.012 +04:00 [INF] User get function
+2021-05-06 23:04:49.320 +04:00 [ERR] Object reference not set to an instance of an object.
+2021-05-06 23:04:49.322 +04:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2021-05-06 23:04:49.329 +04:00 [INF] Executed action Finder.API.Controllers.UserController.Get (Finder.API) in 11328.5254ms
+2021-05-06 23:04:49.329 +04:00 [INF] Executed endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:04:49.329 +04:00 [INF] HTTP GET /api/User responded 400 in 11346.1510 ms
+2021-05-06 23:04:49.333 +04:00 [INF] Request finished in 11355.5286ms 400 text/plain; charset=utf-8
+2021-05-06 23:05:27.654 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/api/User  
+2021-05-06 23:05:27.657 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:05:27.660 +04:00 [INF] Route matched with {action = "Get", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 23:05:27.664 +04:00 [INF] User get function
+2021-05-06 23:05:43.703 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-05-06 23:05:43.726 +04:00 [INF] Hosting environment: Development
+2021-05-06 23:05:43.728 +04:00 [INF] Content root path: C:\Users\ramin\Documents\GitHub\webapi\Webapi.App\Finder.API
+2021-05-06 23:05:43.743 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/  
+2021-05-06 23:05:43.743 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/api/User  
+2021-05-06 23:05:43.892 +04:00 [INF] HTTP GET / responded 404 in 63.4778 ms
+2021-05-06 23:05:43.899 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:05:43.968 +04:00 [INF] Request finished in 235.2911ms 404 
+2021-05-06 23:05:44.021 +04:00 [INF] Route matched with {action = "Get", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 23:05:44.635 +04:00 [INF] User get function
+2021-05-06 23:05:44.786 +04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-06 23:05:44.812 +04:00 [INF] Executed action Finder.API.Controllers.UserController.Get (Finder.API) in 783.1709ms
+2021-05-06 23:05:44.812 +04:00 [INF] Executed endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:05:44.812 +04:00 [INF] HTTP GET /api/User responded 200 in 987.0723 ms
+2021-05-06 23:05:44.813 +04:00 [INF] Request finished in 1071.1734ms 200 application/json; charset=utf-8
+2021-05-06 23:05:51.564 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/api/User  
+2021-05-06 23:05:51.569 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:05:51.570 +04:00 [INF] Route matched with {action = "Get", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 23:05:51.571 +04:00 [INF] User get function
+2021-05-06 23:05:51.585 +04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-06 23:05:51.587 +04:00 [INF] Executed action Finder.API.Controllers.UserController.Get (Finder.API) in 17.2006ms
+2021-05-06 23:05:51.588 +04:00 [INF] Executed endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:05:51.588 +04:00 [INF] HTTP GET /api/User responded 200 in 20.9181 ms
+2021-05-06 23:05:51.588 +04:00 [INF] Request finished in 25.449ms 200 application/json; charset=utf-8
+2021-05-06 23:05:53.633 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44300/api/User  
+2021-05-06 23:05:53.636 +04:00 [INF] Executing endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:05:53.638 +04:00 [INF] Route matched with {action = "Get", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller Finder.API.Controllers.UserController (Finder.API).
+2021-05-06 23:05:53.641 +04:00 [INF] User get function
+2021-05-06 23:05:53.647 +04:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Entities.User, Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2021-05-06 23:05:53.652 +04:00 [INF] Executed action Finder.API.Controllers.UserController.Get (Finder.API) in 13.0383ms
+2021-05-06 23:05:53.653 +04:00 [INF] Executed endpoint 'Finder.API.Controllers.UserController.Get (Finder.API)'
+2021-05-06 23:05:53.654 +04:00 [INF] HTTP GET /api/User responded 200 in 18.7859 ms
+2021-05-06 23:05:53.656 +04:00 [INF] Request finished in 22.73ms 200 application/json; charset=utf-8

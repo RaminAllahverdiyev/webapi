@@ -2,6 +2,7 @@
 using DataAccess.Abstract;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,14 +19,17 @@ namespace Finder.API.Controllers
     public class UserController : ControllerBase
     {
 
-        private IUnitOfWork<User>  userServices;
+        private IServices<User>  userServices;
+        private readonly ILogger<UserController> logger;
         /// <summary>
-        /// constructor
+        /// constructur
         /// </summary>
         /// <param name="_userServices"></param>
-        public UserController(IUnitOfWork<User>  _userServices)
+        /// <param name="_logger"></param>
+        public UserController(IServices<User>  _userServices,ILogger<UserController> _logger)
         {
             userServices = _userServices;
+            logger = _logger;
         }
         /// <summary>
         /// Get all users list
@@ -36,10 +40,12 @@ namespace Finder.API.Controllers
         {
             try
             {
-                return Ok(userServices.UserRepository.GetAll());
+                logger.LogInformation("User get function");
+                return Ok(userServices.GetUser());
             }
             catch (Exception ex)
             {
+                logger.LogError(ex.Message);
                 return new BadRequestObjectResult(ex.Message);
             }
         }
@@ -53,7 +59,8 @@ namespace Finder.API.Controllers
         {
             try
             {
-                return Ok(userServices.UserRepository.GetById(id));
+                logger.LogInformation("User id", id);
+                return Ok(userServices.GetByIdUser(id));
             }
             catch (Exception ex)
             {
@@ -72,18 +79,19 @@ namespace Finder.API.Controllers
             {
                 try
                 {
-                    var NewUser = userServices.UserRepository.Create(user);
-                    userServices.Commit();
+                    var NewUser = userServices.CreateUser(user);
+                    logger.LogInformation("User create {@user}", user);
                     return Ok(NewUser);
                 }
                 catch (Exception ex)
                 {
-                    userServices.Rollback();
+                    logger.LogError(ex.Message);
                     return new BadRequestObjectResult(ex.Message);
                 }
             }
             else
             {
+                logger.LogError("Validation erorrs");
                 throw new ValidationException("Validation erorrs");
             }            
 
@@ -98,13 +106,12 @@ namespace Finder.API.Controllers
         {
             try
             {
-                var NewUser =  userServices.UserRepository.Update(user);
-                userServices.Commit();
+                var NewUser =  userServices.UpdateUser(user);
+                logger.LogInformation("Update user {@user}", user);
                 return Ok(NewUser);
             }
             catch (Exception ex)
             {
-                userServices.Rollback();
                 throw new ArgumentOutOfRangeException(ex.Message);
             }
         }
@@ -117,13 +124,13 @@ namespace Finder.API.Controllers
         {   
             try
             {
-                userServices.UserRepository.Delete(id);
-                userServices.Commit();
+                userServices.DeleteUser(id);
+                logger.LogInformation("Delet user id @{id}", id);
                 return Ok();
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-                userServices.Rollback();
+                logger.LogError(ex.Message);
                 return  new BadRequestResult();
             }
         }

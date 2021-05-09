@@ -23,7 +23,7 @@ namespace DataAccess.Concrate
 
             entity.Id = Connection.ExecuteScalar<int>(
                 "Insert into Employers (Name,UserId) values(@Name,@UserId); SELECT SCOPE_IDENTITY()",
-                param: new { Name = entity.Name, UserId = entity.UserId },
+                param: new { name = entity.Name, UserId = entity.UserId },
                 transaction: Transaction
             );
             return entity;
@@ -32,7 +32,7 @@ namespace DataAccess.Concrate
         {
           var rowaffected =  Connection.Execute(
                         "Delete from Employers where id=@id;",
-                        param: new { Id = id },
+                        param: new { id = id },
                         transaction: Transaction
                     );
             if (rowaffected == 0)
@@ -78,7 +78,7 @@ namespace DataAccess.Concrate
            
                var aff= Connection.Execute(
                 "Update Employers set name=@name,UserId=@UserId where id=@id;",
-                param: new { Id = entity.Id, Name = entity.Name, UserId = entity.UserId },
+                param: new { id = entity.Id, name = entity.Name, UserId = entity.UserId },
                 transaction: Transaction
             );
             if (aff == 0)

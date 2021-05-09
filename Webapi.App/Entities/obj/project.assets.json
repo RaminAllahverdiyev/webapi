@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\ramin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ramin\\AppData\\Roaming\\NuGet\\NuGet.Config",

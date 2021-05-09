@@ -17,7 +17,6 @@ namespace DataAccess.Concrate
         private IUserRepository _userRepository;
         private IEmployerRepository _employerRepository;
         private bool _disposed;
-        
         public UnitOfWork(IConfiguration configuration)
         {
             _connection = new SqlConnection(configuration.GetConnectionString("DefaultConnection"));

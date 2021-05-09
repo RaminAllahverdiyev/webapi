@@ -5869,11 +5869,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Business\\Business.csproj",
+      "projectPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\ramin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Business\\obj\\",
+      "outputPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ramin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5890,11 +5890,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\ramin\\source\\repos\\Webapi.App\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Entities\\Entities.csproj"
+            "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Entities\\Entities.csproj"
             }
           }
         }

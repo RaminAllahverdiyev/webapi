@@ -12,57 +12,138 @@ namespace Business.Concrate
     public class Manager<T> : IServices<T> where T : BaseEntity
     {
         public IUnitOfWork<T> unitOfWork;
-        public IConfiguration configuration;
-        public Manager(IConfiguration _configuration)
+        public Manager(IUnitOfWork<T> _unitOfWork)
         {
-            configuration = _configuration;
-            using (var unit = new UnitOfWork<T>(configuration))
-            {
-                unitOfWork = unit;
-            }
-
+            unitOfWork = _unitOfWork;
         }
 
         public User CreateUser(User entity)
         {
-            return unitOfWork.UserRepository.Create(entity);
+            try
+            {
+                unitOfWork.UserRepository.Create(entity);
+                unitOfWork.Commit();
+                return entity;
+            }
+            catch (Exception)
+            {
+                unitOfWork.Rollback();
+                throw new Exception();
+            }
         }
 
         public Employer CreateEmployer(Employer entity)
         {
-            return unitOfWork.EmployerRepository.Create(entity);
+            try
+            {
+                unitOfWork.EmployerRepository.Create(entity);
+                unitOfWork.Commit();
+                return entity;
+            }
+            catch (Exception)
+            {
+                unitOfWork.Rollback();
+                throw new Exception();
+            }
         }
         public void DeleteUser(int id)
         {
-            unitOfWork.UserRepository.Delete(id);
+            try
+            {
+                unitOfWork.UserRepository.Delete(id);
+                unitOfWork.Commit();
+            }
+            catch (Exception)
+            {
+                unitOfWork.Rollback();
+                throw new Exception();
+            }
         }
         public void DeleteEmployer(int id)
         {
-            unitOfWork.EmployerRepository.Delete(id);
+            try
+            {
+                unitOfWork.EmployerRepository.Delete(id);
+                unitOfWork.Commit();
+            }
+            catch (Exception)
+            {
+                unitOfWork.Rollback();
+                throw new Exception();
+            }
         }
         public User GetByIdUser(int id)
         {
-            return unitOfWork.UserRepository.GetById(id);
+            try
+            {
+               return unitOfWork.UserRepository.GetById(id);
+            }
+            catch (Exception)
+            {
+                throw new NullReferenceException();
+            }
         }
         public Employer GetByIdEmployer(int id)
         {
-            return unitOfWork.EmployerRepository.GetById(id);
+            try
+            {
+                return unitOfWork.EmployerRepository.GetById(id);
+            }
+            catch (Exception)
+            {
+                throw new NullReferenceException();
+            }
         }
         public IEnumerable<User> GetUser()
         {
-            return unitOfWork.UserRepository.GetAll();
+            
+            try
+            {
+                return unitOfWork.UserRepository.GetAll();
+            }
+            catch (Exception)
+            {
+                throw new NullReferenceException();
+            }
         }
         public IEnumerable<Employer> GetEmployer()
         {
-            return unitOfWork.EmployerRepository.GetAll();
+            try
+            {
+                return unitOfWork.EmployerRepository.GetAll();
+            }
+            catch (Exception)
+            {
+                throw new NullReferenceException();
+            }
         }
         public User UpdateUser(User entity)
         {
-            return unitOfWork.UserRepository.Update(entity);
+            try
+            {
+                unitOfWork.UserRepository.Update(entity);
+                unitOfWork.Commit();
+                return entity;
+            }
+            catch (Exception)
+            {
+                unitOfWork.Rollback();
+                throw new ArgumentException();
+            }
         }
         public Employer UpdateEmployer(Employer entity)
         {
-            return unitOfWork.EmployerRepository.Update(entity);
+            try
+            {
+                unitOfWork.EmployerRepository.Update(entity);
+                unitOfWork.Commit();
+                return entity;
+            }
+            catch (Exception)
+            {
+                unitOfWork.Rollback();
+                throw new ArgumentException();
+            }
         }
     }
 }

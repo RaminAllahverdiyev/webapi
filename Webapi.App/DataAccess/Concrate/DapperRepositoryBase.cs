@@ -12,7 +12,7 @@ using System.Text;
 
 namespace DataAccess.Concrate
 {
-    public  class DapperRepositoryBase<T> 
+    public  class DapperRepositoryBase<T> : IRepository<T>
     {
 
         protected IDbTransaction Transaction { get; private set; }

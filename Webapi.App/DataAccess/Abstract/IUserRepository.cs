@@ -5,7 +5,7 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IUserRepository  
+    public interface IUserRepository : IRepository<User>
     {
         IEnumerable<User> GetAll();
         User GetById(int? id);

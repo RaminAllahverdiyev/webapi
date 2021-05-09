@@ -2,6 +2,7 @@
 using DataAccess.Abstract;
 using Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,16 @@ namespace Finder.API.Controllers
     [ApiController]
     public class EmployerController : Controller
     {
-        private IUnitOfWork<Employer> employerServices;
+        private IServices<Employer> employerServices;
+        private readonly ILogger logger;
         /// <summary>
         /// Employer controller constructor 
         /// </summary>
         /// <param name="_employerServices"></param>
-        public EmployerController(IUnitOfWork<Employer> _employerServices)
+        public EmployerController(IServices<Employer> _employerServices, ILogger _logger)
         {
             employerServices = _employerServices;
+            logger = _logger;
         }
         /// <summary>
         /// Get all employer list
@@ -34,14 +37,15 @@ namespace Finder.API.Controllers
         {
             try
             {
-                return Ok(employerServices.EmployerRepository.GetAll());
+                logger.LogInformation("Get all employers");
+                return Ok(employerServices.GetEmployer());
             }
             catch (Exception ex)
             {
+                logger.LogError(ex.Message);
                 return new BadRequestObjectResult(ex.Message);
             }
         }
-
         /// <summary>
         /// Get employer by id
         /// </summary>
@@ -52,14 +56,14 @@ namespace Finder.API.Controllers
         {
             try
             {
-                return  Ok(employerServices.EmployerRepository.GetById(id));
+                logger.LogInformation("Get employer {@id}",id);
+                return  Ok(employerServices.GetByIdEmployer(id));
             }
             catch (Exception ex)
             {
+                logger.LogError(ex.Message);
                 return new BadRequestObjectResult(ex.Message);
             }
-
-
         }
 
         /// <summary>
@@ -72,13 +76,13 @@ namespace Finder.API.Controllers
         {
             try
             {
-                employerServices.EmployerRepository.Create(employer);
-                employerServices.Commit();
+                employerServices.CreateEmployer(employer);
+                logger.LogInformation("Create new {@employer}",employer);
                 return Ok(employer);
             }
             catch (Exception ex)
             {
-                employerServices.Rollback();
+                logger.LogError(ex.Message);
                 return new BadRequestObjectResult(ex.Message);
             }
         }
@@ -92,13 +96,13 @@ namespace Finder.API.Controllers
         {
             try
             {
-                var emp = employerServices.EmployerRepository.Update(employer);
-                employerServices.Commit();
+                var emp = employerServices.UpdateEmployer(employer);
+                logger.LogInformation("Update {@employer}", emp);
                 return Ok(emp);
             }
             catch (Exception ex)
             {
-                employerServices.Rollback();
+                logger.LogError(ex.Message);
                 return new BadRequestObjectResult(ex.Message);
             }
         }
@@ -112,13 +116,13 @@ namespace Finder.API.Controllers
         {
             try
             {
-                employerServices.EmployerRepository.Delete(id);
-                employerServices.Commit();
+                employerServices.DeleteEmployer(id);
+                logger.LogInformation("Delete employer {@id}", id);
                 return Ok();
             }
-            catch (Exception )
+            catch (Exception ex )
             {
-                employerServices.Rollback();
+                logger.LogError(ex.Message);
                 return new BadRequestResult();
             }
         }

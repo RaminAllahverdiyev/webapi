@@ -5850,11 +5850,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\ramin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ramin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5871,8 +5871,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\ramin\\source\\repos\\Webapi.App\\Entities\\Entities.csproj"
+            "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\ramin\\Documents\\GitHub\\webapi\\Webapi.App\\Entities\\Entities.csproj"
             }
           }
         }
